@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <style>
+      .t1{font: 800 90px -apple-system,BlinkMacSystemFont,'SF UI Display',Arial,sans-serif; letter-spacing: .10em;}
+      .t2{font: 600 28px -apple-system,BlinkMacSystemFont,'SF UI Display',Arial,sans-serif; letter-spacing: .22em;}
+    </style>
+  </defs>
+
+  <!-- Transparent background so the card color shows through -->
+  <rect x="0" y="0" width="1600" height="1000" fill="transparent"/>
+
+  <g opacity="0.78">
+    <text x="800" y="520" text-anchor="middle" class="t1" fill="#ffffff">COMING SOON</text>
+  </g>
+  <g opacity="0.65">
+    <text x="800" y="600" text-anchor="middle" class="t2" fill="#ffffff">NEW WORK IN PROGRESS</text>
+  </g>
+</svg>

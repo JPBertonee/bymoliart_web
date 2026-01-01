@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moliart — Surface Pattern Designer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-loading">
+
+  <!-- Fullscreen loading intro (splash) -->
+  <div id="siteLoader" class="site-loader" role="status" aria-live="polite" aria-label="Loading" tabindex="0">
+    <div class="site-loader__inner">
+      <div class="loader-logo-wrap" aria-hidden="true">
+        <img class="loader-logo loader-logo--base" src="assets/IDENTIDAD VISUAL MOLIART/Logos/moliart_negro.png" alt="" />
+        <div class="loader-logo-reveal" id="loaderReveal">
+          <img class="loader-logo loader-logo--color" id="loaderLogoColor" src="assets/IDENTIDAD VISUAL MOLIART/Logos/moliart_azul.png" alt="" />
+        </div>
+      </div>
+
+      <p class="site-loader__headline" id="loaderHeadline">Something incredible is on its way.</p>
+      <p class="site-loader__sub" id="loaderSub">Preparing an extraordinary collection…</p>
+
+      <div class="loader-progress" aria-hidden="true">
+        <div class="loader-progress__bar" id="loaderBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subtle background icons (generated via JS) -->
+  <div id="bgIcons" class="bg-icons" aria-hidden="true"></div>
+
+  <!-- Sticky mini header (appears on scroll) -->
+  <div class="stickybar" id="stickybar" aria-hidden="true">
+    <img src="assets/IDENTIDAD VISUAL MOLIART/Logos/moliart_blanco.png" alt="Moliart" class="stickybar__logo"/>
+  </div>
+
+  <header class="hero" id="home" role="banner">
+    <div class="hero-inner">
+      <img src="assets/IDENTIDAD VISUAL MOLIART/Logos/moliart_blanco.png" alt="Moliart" class="hero-logo"/>
+
+      <p class="hero-desc hero-desc--tagline">Surface Pattern Designer | Illustrator</p>
+
+      <div class="hero-cta">
+        <a class="btn-primary" href="#contact">Let’s Collaborate</a>
+      </div>
+    </div>
+
+    <div class="ticker" aria-label="Services">
+      <div class="ticker-track">
+        <span class="ticker-text">
+          <span class="ticker-item">Pattern Licensing</span>
+          <img class="ticker-sep" src="assets/separators/sep1.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Custom Pattern Design</span>
+          <img class="ticker-sep" src="assets/separators/sep3.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Collection Development</span>
+          <img class="ticker-sep" src="assets/separators/sep1.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Colorways & Variations</span>
+          <img class="ticker-sep" src="assets/separators/sep3.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Mockups for Presentations</span>
+          <img class="ticker-sep" src="assets/separators/sep1.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Print-Ready Files</span>
+          <img class="ticker-sep" src="assets/separators/sep3.png" alt="" aria-hidden="true" />
+        </span>
+        <span class="ticker-text" aria-hidden="true">
+          <span class="ticker-item">Pattern Licensing</span>
+          <img class="ticker-sep" src="assets/separators/sep1.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Custom Pattern Design</span>
+          <img class="ticker-sep" src="assets/separators/sep3.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Collection Development</span>
+          <img class="ticker-sep" src="assets/separators/sep1.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Colorways & Variations</span>
+          <img class="ticker-sep" src="assets/separators/sep3.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Mockups for Presentations</span>
+          <img class="ticker-sep" src="assets/separators/sep1.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Print-Ready Files</span>
+          <img class="ticker-sep" src="assets/separators/sep3.png" alt="" aria-hidden="true" />
+        </span>
+        <span class="ticker-text" aria-hidden="true">
+          <span class="ticker-item">Pattern Licensing</span>
+          <img class="ticker-sep" src="assets/separators/sep1.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Custom Pattern Design</span>
+          <img class="ticker-sep" src="assets/separators/sep3.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Collection Development</span>
+          <img class="ticker-sep" src="assets/separators/sep1.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Colorways & Variations</span>
+          <img class="ticker-sep" src="assets/separators/sep3.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Mockups for Presentations</span>
+          <img class="ticker-sep" src="assets/separators/sep1.png" alt="" aria-hidden="true" />
+          <span class="ticker-item">Print-Ready Files</span>
+          <img class="ticker-sep" src="assets/separators/sep3.png" alt="" aria-hidden="true" />
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section quick navigation (below ticker) -->
+  <nav class="section-quicknav" aria-label="Section navigation">
+    <a class="section-pill" href="#portfolio">Portfolio</a>
+    <a class="section-pill" href="#about">About</a>
+    <a class="section-pill" href="#services">Services</a>
+    <a class="section-pill" href="#contact">Contact</a>
+  </nav>
+
+  <section class="portfolio split-section" id="portfolio">
+    <div class="split-left">
+      <div class="split-num">01</div>
+      <h2 class="split-title">Portfolio</h2>
+    </div>
+    <div class="split-right">
+      <!-- Portfolio grid: 2 columns, shows up to 6 items (2x3). More items reveal on click. -->
+      <div class="portfolio-grid" id="portfolioGrid" aria-label="Projects">
+
+        <article class="portfolio-item" data-portfolio-item>
+          <button
+            class="project-card__btn js-open-project"
+            type="button"
+            data-title="Eternamente Bali"
+            data-subtitle="6-piece gallery — patterns + mockups"
+            data-images='[
+              "assets/projects/eternamente-bali/00_cover.jpeg",
+              "assets/projects/eternamente-bali/01_mockup_green.jpeg",
+              "assets/projects/eternamente-bali/03_mockup_purple_set.jpeg",
+              "assets/projects/eternamente-bali/04_pattern_original.jpeg",
+              "assets/projects/eternamente-bali/05_pattern_variants.jpeg",
+              "assets/projects/eternamente-bali/06_mockup_peach_outfit.jpeg"
+            ]'
+          >
+            <div class="project-card__media">
+              <img src="assets/projects/eternamente-bali/00_cover.jpeg" alt="Eternamente Bali — project preview" loading="lazy" />
+            </div>
+            <div class="project-card__meta">
+              <span class="project-card__title">Eternamente Bali</span>
+              <span class="project-card__cta">View gallery →</span>
+            </div>
+          </button>
+        </article>
+
+        <article class="portfolio-item" data-portfolio-item>
+          <button
+            class="project-card__btn js-open-project"
+            type="button"
+            data-title="Project 02"
+            data-subtitle="Preview"
+            data-images='[
+              "assets/projects/project-02/00_cover.jpeg"
+            ]'
+          >
+            <div class="project-card__media">
+              <img src="assets/projects/project-02/00_cover.jpeg" alt="Project 02 — project preview" loading="lazy" />
+            </div>
+            <div class="project-card__meta">
+              <span class="project-card__title">Project 02</span>
+              <span class="project-card__cta">View preview →</span>
+            </div>
+          </button>
+        </article>
+
+
+        <article class="portfolio-item portfolio-item--pink" data-portfolio-item>
+          <button
+            class="project-card__btn js-open-project"
+            type="button"
+            data-title="Project 03"
+            data-subtitle="Coming soon"
+            data-images='[
+              "assets/projects/placeholders/coming-soon.svg"
+            ]'
+          >
+            <div class="project-card__media">
+              <img src="assets/projects/placeholders/coming-soon.svg" alt="Project 03 — coming soon" loading="lazy" />
+            </div>
+            <div class="project-card__meta">
+              <span class="project-card__title">Project 03</span>
+              <span class="project-card__cta">View preview →</span>
+            </div>
+          </button>
+        </article>
+
+        <article class="portfolio-item portfolio-item--yellow" data-portfolio-item>
+          <button
+            class="project-card__btn js-open-project"
+            type="button"
+            data-title="Project 04"
+            data-subtitle="Coming soon"
+            data-images='[
+              "assets/projects/placeholders/coming-soon.svg"
+            ]'
+          >
+            <div class="project-card__media">
+              <img src="assets/projects/placeholders/coming-soon.svg" alt="Project 04 — coming soon" loading="lazy" />
+            </div>
+            <div class="project-card__meta">
+              <span class="project-card__title">Project 04</span>
+              <span class="project-card__cta">View preview →</span>
+            </div>
+          </button>
+        </article>
+
+        <article class="portfolio-item portfolio-item--blue" data-portfolio-item>
+          <button
+            class="project-card__btn js-open-project"
+            type="button"
+            data-title="Project 05"
+            data-subtitle="Coming soon"
+            data-images='[
+              "assets/projects/placeholders/coming-soon.svg"
+            ]'
+          >
+            <div class="project-card__media">
+              <img src="assets/projects/placeholders/coming-soon.svg" alt="Project 05 — coming soon" loading="lazy" />
+            </div>
+            <div class="project-card__meta">
+              <span class="project-card__title">Project 05</span>
+              <span class="project-card__cta">View preview →</span>
+            </div>
+          </button>
+        </article>
+
+        <article class="portfolio-item portfolio-item--pink" data-portfolio-item>
+          <button
+            class="project-card__btn js-open-project"
+            type="button"
+            data-title="Project 06"
+            data-subtitle="Coming soon"
+            data-images='[
+              "assets/projects/placeholders/coming-soon.svg"
+            ]'
+          >
+            <div class="project-card__media">
+              <img src="assets/projects/placeholders/coming-soon.svg" alt="Project 06 — coming soon" loading="lazy" />
+            </div>
+            <div class="project-card__meta">
+              <span class="project-card__title">Project 06</span>
+              <span class="project-card__cta">View preview →</span>
+            </div>
+          </button>
+        </article>
+
+        <!-- Add more <article data-portfolio-item> blocks here. The page will show 6, then reveal the rest. -->
+
+      </div>
+
+      <div class="portfolio-morewrap" id="portfolioMoreWrap" hidden>
+        <button class="portfolio-more" id="portfolioMoreBtn" type="button">See more projects</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about split-section" id="about">
+    <div class="split-left">
+      <div class="split-num">02</div>
+      <h2 class="split-title">About</h2>
+    </div>
+    <div class="split-right">
+      <div class="about-wrap">
+        <div class="about-avatar-wrap" aria-label="Portrait">
+          <img class="about-avatar" src="assets/about_sofia.jpeg" alt="Sofia — Moliart" loading="lazy"/>
+        </div>
+        <div class="about-text">
+          <p>
+      I’m a surface pattern designer and illustrator creating expressive, joyful,
+      contemporary patterns for fashion and textile brands.
+      I design with real products in mind — how the print moves on the body,
+      how the colors translate on fabric, and how a collection feels when it all comes together.
+    </p>
+    <p>
+      My work is inspired by organic shapes, playful details and bold-yet-soft color stories.
+      I love building collections that feel modern, feminine and full of character — ready for licensing or custom collaborations.
+    </p>
+        </div>
+      </div>
+    <!-- Etsy link removed from About (kept only in Contact section) -->
+    </div>
+  </section>
+
+  <section class="services split-section" id="services">
+    <div class="split-left">
+      <div class="split-num">03</div>
+      <h2 class="split-title">Services</h2>
+    </div>
+
+    <div class="split-right">
+      <div class="services-tiles" aria-label="Services">
+        <button class="service-tile service-tile--blue js-open-service" type="button"
+          data-title="Custom Patterns"
+          data-subtitle="Made for your brand"
+          data-body="I design custom, production‑ready prints tailored to your product, audience and aesthetic. From moodboard to final files, we build a print story that feels unmistakably yours.">
+          <span class="service-tile__word">Custom Patterns</span>
+        </button>
+
+        <button class="service-tile service-tile--pink js-open-service" type="button"
+          data-title="Pattern Licensing"
+          data-subtitle="Ready-to-license artwork"
+          data-body="Choose from ready‑to‑license patterns and mini collections. Perfect if you need something beautiful, fast — with the option to adjust scale or colorways to suit your product.">
+          <span class="service-tile__word">Pattern Licensing</span>
+        </button>
+
+        <button class="service-tile service-tile--yellow js-open-service" type="button"
+          data-title="Mini Collections"
+          data-subtitle="Cohesive print stories"
+          data-body="I create cohesive sets of prints (hero + coordinates) with harmonious color stories and variations. Ideal for seasonal drops, capsules, or brand refreshes.">
+          <span class="service-tile__word">Mini Collections</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact split-section" id="contact">
+    <div class="split-left">
+      <div class="split-num">04</div>
+      <h2 class="split-title">Contact</h2>
+    </div>
+    <div class="split-right">
+<div class="contact-formwrap" aria-label="Quick contact form">
+  <p class="contact-formhint">Let’s create something beautiful together — send me a quick message:</p>
+  <form class="contact-form" id="contactForm" novalidate>
+    <label>
+      <span>Name *</span>
+      <input type="text" name="name" placeholder="Your Name..." required>
+    </label>
+
+    <label>
+      <span>Email Address *</span>
+      <input type="email" name="email" placeholder="Your Email Address..." required>
+    </label>
+
+    <label>
+      <span>Message *</span>
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+    </label>
+
+    <button type="submit" class="contact-submit" id="contactSubmit">Submit</button>
+    <p class="contact-status" id="contactStatus" role="status" aria-live="polite"></p>
+  </form>
+</div>
+
+</div>
+  </section>
+
+  <footer>
+    <div class="contact-icons" aria-label="Social links">
+      <a class="contact-icon contact-icon--only" href="https://www.etsy.com/shop/bymoliart" target="_blank" rel="noopener" aria-label="Etsy">
+        <svg viewBox="0 0 384 512" width="22" height="22" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M384 348c-1.75 10.75-13.75 110-15.5 132-117.879-4.299-219.895-4.743-368.5 0v-25.5c45.457-8.948 60.627-8.019 61-35.25 1.793-72.322 3.524-244.143 0-322-1.029-28.46-12.13-26.765-61-36v-25.5c73.886 2.358 255.933 8.551 362.999-3.75-3.5 38.25-7.75 126.5-7.75 126.5H332C320.947 115.665 313.241 68 277.25 68h-137c-10.25 0-10.75 3.5-10.75 9.75V241.5c58 .5 88.5-2.5 88.5-2.5 29.77-.951 27.56-8.502 40.75-65.251h25.75c-4.407 101.351-3.91 61.829-1.75 160.25H257c-9.155-40.086-9.065-61.045-39.501-61.5 0 0-21.5-2-88-2v139c0 26 14.25 38.25 44.25 38.25H263c63.636 0 66.564-24.996 98.751-99.75H384z"/>
+        </svg>
+      </a>
+
+      <a class="contact-icon contact-icon--only" href="https://www.behance.net/83fb98e1" target="_blank" rel="noopener" aria-label="Behance">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M9.4 11.2c.9-.4 1.4-1.2 1.4-2.2 0-1.9-1.4-2.9-3.7-2.9H3v12h4.6c2.5 0 4.1-1 4.1-3.2 0-1.5-.8-2.6-2.3-2.7Zm-3.9-3H7c.9 0 1.5.4 1.5 1.2 0 .9-.6 1.3-1.6 1.3H5.5V8.2Zm1.7 7.6H5.5v-3.1h1.9c1.2 0 1.9.5 1.9 1.5 0 1.1-.7 1.6-2.1 1.6Zm10.4-7.9c-3 0-4.9 2.1-4.9 5.2 0 3.2 1.9 5.2 5 5.2 2.2 0 3.8-1.1 4.3-3h-2c-.2.7-.9 1.2-2.2 1.2-1.5 0-2.4-.8-2.5-2.3H22c.1-3.6-1.7-6.3-4.4-6.3Zm-2.3 4.4c.2-1.2 1-2 2.3-2 1.4 0 2.1.8 2.2 2h-4.5ZM14.6 6h5.1v1.4h-5.1V6Z"/>
+        </svg>
+      </a>
+
+      <a class="contact-icon contact-icon--only" href="https://instagram.com/bymoliart" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.8 6.2a.9.9 0 1 1-.9-.9.9.9 0 0 1 .9.9z"/>
+        </svg>
+      </a>
+    </div>
+    <p>© byMoliart 2026</p>
+  </footer>
+
+
+  
+  <!-- Service Details Modal -->
+  <div class="modal" id="serviceModal" aria-hidden="true">
+    <div class="modal__backdrop js-close-service" tabindex="-1"></div>
+    <div class="modal__panel modal__panel--text" role="dialog" aria-modal="true" aria-label="Service details">
+      <button class="modal__close js-close-service" aria-label="Close">×</button>
+      <div class="modal__header">
+        <h3 class="modal__title" id="serviceTitle">Service</h3>
+        <p class="modal__subtitle" id="serviceSubtitle"></p>
+      </div>
+      <div class="modal__text" id="serviceBody"></div>
+    </div>
+  </div>
+
+<!-- Project Gallery Modal -->
+  <div class="modal" id="projectModal" aria-hidden="true">
+    <div class="modal__backdrop js-close-modal" tabindex="-1"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Project gallery">
+      <button class="modal__close js-close-modal" aria-label="Close gallery">×</button>
+      <div class="modal__header">
+        <h3 class="modal__title" id="modalTitle">Project</h3>
+        <p class="modal__subtitle" id="modalSubtitle"></p>
+      </div>
+      <div class="modal__grid" id="modalGrid"></div>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="backtotop" type="button" aria-label="Back to top">↑</button>
+
+  <script>
+    (function(){
+      // --- Loading intro splash ---
+      const loader = document.getElementById('siteLoader');
+      const loaderBar = document.getElementById('loaderBar');
+      const loaderHeadline = document.getElementById('loaderHeadline');
+      const loaderSub = document.getElementById('loaderSub');
+      const loaderLogoColor = document.getElementById('loaderLogoColor');
+
+      // Brand logo variants (cycle)
+      const loaderCycle = [
+        {src: 'assets/IDENTIDAD VISUAL MOLIART/Logos/moliart_azul.png',  accent: 'var(--blue)'},
+        {src: 'assets/IDENTIDAD VISUAL MOLIART/Logos/moliart_verde.png', accent: 'var(--olive)'},
+        {src: 'assets/IDENTIDAD VISUAL MOLIART/Logos/moliart_rosa.png',  accent: 'var(--magenta)'}
+      ];
+
+      const loaderLines = [
+        {h: 'Something incredible is on its way.', s: 'Preparing an extraordinary collection…'},
+        {h: 'Almost there.', s: 'A few final touches before we begin ✨'},
+        {h: 'Stay tuned.', s: 'New patterns are about to unfold…'}
+      ];
+
+      let cycleIdx = 0;
+      let lineIdx = 0;
+      let cycleTimer = null;
+
+      function startLoaderCycle(){
+        if(!loader || !loaderLogoColor) return;
+        cycleTimer = window.setInterval(() => {
+          cycleIdx = (cycleIdx + 1) % loaderCycle.length;
+          const c = loaderCycle[cycleIdx];
+          loaderLogoColor.src = c.src;
+          if(loaderBar) loaderBar.style.backgroundColor = c.accent;
+
+          lineIdx = (lineIdx + 1) % loaderLines.length;
+          if(loaderHeadline) loaderHeadline.textContent = loaderLines[lineIdx].h;
+          if(loaderSub) loaderSub.textContent = loaderLines[lineIdx].s;
+        }, 1500);
+      }
+
+      function stopLoaderCycle(){
+        if(cycleTimer) window.clearInterval(cycleTimer);
+        cycleTimer = null;
+      }
+
+      function runLoader(){
+        if(!loader || !loaderBar) {
+          document.body.classList.remove('is-loading');
+          return;
+        }
+        // Fake progress to match the reveal animation
+        const start = performance.now();
+        const dur = 5200;
+        startLoaderCycle();
+
+        let dismissed = false;
+        const dismiss = () => {
+          if(dismissed || !loader) return;
+          dismissed = true;
+          loader.classList.add('is-hidden');
+          stopLoaderCycle();
+          document.body.classList.remove('is-loading');
+          window.setTimeout(() => { try { loader.remove(); } catch(e){} }, 650);
+        };
+
+        // Allow users to continue immediately by clicking/tapping anywhere on the splash.
+        loader.addEventListener('click', dismiss, { once: true });
+        loader.addEventListener('keydown', (e) => {
+          if(e.key === 'Enter' || e.key === ' ') dismiss();
+        });
+
+        function tick(now){
+          const p = Math.min(1, (now - start) / dur);
+          loaderBar.style.width = `${Math.round(p*100)}%`;
+          if(p < 1){
+            requestAnimationFrame(tick);
+          }
+        }
+        requestAnimationFrame(tick);
+
+        const minVisible = 4200;
+        const ready = () => {
+          const elapsed = performance.now() - start;
+          const wait = Math.max(0, minVisible - elapsed);
+          window.setTimeout(() => {
+            // Auto-continue after a few seconds (or sooner if the user clicks).
+            dismiss();
+          }, wait);
+        };
+
+        if(document.readyState === 'complete') ready();
+        else window.addEventListener('load', ready, { once: true });
+
+        // Safety auto-dismiss in case the load event is delayed.
+        window.setTimeout(() => dismiss(), 7500);
+      }
+
+      runLoader();
+
+      const modal = document.getElementById('projectModal');
+      const grid  = document.getElementById('modalGrid');
+      const title = document.getElementById('modalTitle');
+      const subtitle = document.getElementById('modalSubtitle');
+
+      const openers = document.querySelectorAll('.js-open-project');
+
+      // --- Portfolio: show 2x3 grid (6 items) + "See more" when needed ---
+      (function initPortfolioGrid(){
+        const items = Array.from(document.querySelectorAll('[data-portfolio-item]'));
+        const moreWrap = document.getElementById('portfolioMoreWrap');
+        const moreBtn = document.getElementById('portfolioMoreBtn');
+
+        if(!items.length) return;
+
+        const MAX = 6;
+        if(items.length > MAX){
+          items.forEach((el, idx) => {
+            if(idx >= MAX) el.hidden = true;
+          });
+          if(moreWrap) moreWrap.hidden = false;
+        }
+
+        if(moreBtn){
+          moreBtn.addEventListener('click', () => {
+            items.forEach(el => el.hidden = false);
+            if(moreWrap) moreWrap.hidden = true;
+          });
+        }
+      })();
+      const closers = modal.querySelectorAll('.js-close-modal');
+
+      function openModal(payload){
+        // fill content
+        title.textContent = payload.title || 'Project';
+        subtitle.textContent = payload.subtitle || '';
+        grid.innerHTML = '';
+
+        (payload.images || []).forEach((src, idx) => {
+          const wrap = document.createElement('div');
+          wrap.className = 'modal__imgwrap';
+          wrap.innerHTML = `<img src="${src}" alt="${payload.title || 'Project'} image ${idx+1}" loading="lazy">`;
+          grid.appendChild(wrap);
+        });
+
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('is-modal-open');
+      }
+
+      function closeModal(){
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('is-modal-open');
+      }
+
+      openers.forEach(el => {
+        el.addEventListener('click', () => {
+          const payload = {
+            title: el.dataset.title,
+            subtitle: el.dataset.subtitle,
+            images: JSON.parse(el.dataset.images || '[]')
+          };
+          openModal(payload);
+        });
+      });
+
+      closers.forEach(el => el.addEventListener('click', closeModal));
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
+      });
+
+
+      // Service details modal
+      const serviceModal = document.getElementById('serviceModal');
+      const serviceTitle = document.getElementById('serviceTitle');
+      const serviceSubtitle = document.getElementById('serviceSubtitle');
+      const serviceBody = document.getElementById('serviceBody');
+
+      const serviceOpeners = document.querySelectorAll('.js-open-service');
+      const serviceClosers = serviceModal ? serviceModal.querySelectorAll('.js-close-service') : [];
+
+      function openServiceModal(payload){
+        if(!serviceModal) return;
+        serviceTitle.textContent = payload.title || 'Service';
+        serviceSubtitle.textContent = payload.subtitle || '';
+        serviceBody.textContent = payload.body || '';
+        serviceModal.setAttribute('aria-hidden','false');
+        document.body.classList.add('is-modal-open');
+      }
+      function closeServiceModal(){
+        if(!serviceModal) return;
+        serviceModal.setAttribute('aria-hidden','true');
+        document.body.classList.remove('is-modal-open');
+      }
+
+      serviceOpeners.forEach(el => {
+        el.addEventListener('click', () => {
+          openServiceModal({
+            title: el.dataset.title,
+            subtitle: el.dataset.subtitle,
+            body: el.dataset.body
+          });
+        });
+      });
+      serviceClosers.forEach(el => el.addEventListener('click', closeServiceModal));
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape' && serviceModal && serviceModal.getAttribute('aria-hidden') === 'false') closeServiceModal();
+      });
+
+
+      // Contact form (sends via /api/contact on Vercel)
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('contactStatus');
+      const submitBtn = document.getElementById('contactSubmit');
+
+      if(form){
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          if(status){ status.textContent = ''; status.classList.remove('is-success','is-error'); }
+
+          // basic validation
+          const fd = new FormData(form);
+          const name = (fd.get('name') || '').toString().trim();
+          const email = (fd.get('email') || '').toString().trim();
+          const message = (fd.get('message') || '').toString().trim();
+
+          if(!name || !email || !message){
+            if(status){ status.textContent = 'Please complete all required fields.'; status.classList.add('is-error'); }
+            return;
+          }
+
+          if(submitBtn){
+            submitBtn.disabled = true;
+            submitBtn.setAttribute('aria-busy','true');
+          }
+
+          try{
+            const resp = await fetch('/api/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name, email, message })
+            });
+
+            const data = await resp.json().catch(() => ({}));
+
+            if(resp.ok){
+              if(status){ status.textContent = 'Message sent! I’ll get back to you soon.'; status.classList.add('is-success'); }
+              form.reset();
+            }else{
+              if(status){ status.textContent = data.error || 'Something went wrong. Please try again later.'; status.classList.add('is-error'); }
+            }
+          }catch(err){
+            if(status){ status.textContent = 'Connection error. Please try again.'; status.classList.add('is-error'); }
+          }finally{
+            if(submitBtn){
+              submitBtn.disabled = false;
+              submitBtn.removeAttribute('aria-busy');
+            }
+          }
+        });
+      }
+      // Sticky mini header (logo stays visible while browsing)
+      const sticky = document.getElementById('stickybar');
+      const heroEl = document.getElementById('home');
+      function syncSticky(){
+        if(!sticky || !heroEl) return;
+        const threshold = heroEl.offsetHeight - 80;
+        if(window.scrollY > threshold){
+          document.body.classList.add('is-sticky');
+          sticky.setAttribute('aria-hidden','false');
+        }else{
+          document.body.classList.remove('is-sticky');
+          sticky.setAttribute('aria-hidden','true');
+        }
+      }
+      window.addEventListener('scroll', syncSticky, {passive:true});
+      window.addEventListener('resize', syncSticky);
+      syncSticky();
+
+      // Back to top button
+      const backToTop = document.getElementById('backToTop');
+      function syncBackToTop(){
+        if(!backToTop) return;
+        if(window.scrollY > 500){
+          backToTop.classList.add('is-visible');
+        }else{
+          backToTop.classList.remove('is-visible');
+        }
+      }
+      if(backToTop){
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      window.addEventListener('scroll', syncBackToTop, {passive:true});
+      window.addEventListener('resize', syncBackToTop);
+      syncBackToTop();
+      const bg = document.getElementById('bgIcons');
+      if(bg){
+        // Only use brand icons 01-06 (avoid squares/rectangles: 07-10)
+        const icons = [
+          'assets/IDENTIDAD VISUAL MOLIART/Recursos Gra╠üficos/01_Recurso_Azul.png',
+          'assets/IDENTIDAD VISUAL MOLIART/Recursos Gra╠üficos/02_Recurso_Azul.png',
+          'assets/IDENTIDAD VISUAL MOLIART/Recursos Gra╠üficos/06_Recurso_Azul.png',
+          'assets/IDENTIDAD VISUAL MOLIART/Recursos Gra╠üficos/03_Recurso_Rosa.png',
+          'assets/IDENTIDAD VISUAL MOLIART/Recursos Gra╠üficos/04_Recurso_Rosa.png',
+          'assets/IDENTIDAD VISUAL MOLIART/Recursos Gra╠üficos/05_Recurso_Rosa.png',
+          'assets/IDENTIDAD VISUAL MOLIART/Recursos Gra╠üficos/01_Recurso_Verde_Orcurso.png',
+          'assets/IDENTIDAD VISUAL MOLIART/Recursos Gra╠üficos/02_Recurso_Verde_Orcurso.png',
+          'assets/IDENTIDAD VISUAL MOLIART/Recursos Gra╠üficos/06_Recurso_Verde_Orcurso.png'
+        ];
+
+        const placed = [];
+        const vw = () => Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        const vh = () => Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+        const count = 18;
+        const maxAttempts = 70;
+        const pad = 14;
+
+        function intersects(a,b){
+          return !(a.x + a.w + pad < b.x || b.x + b.w + pad < a.x || a.y + a.h + pad < b.y || b.y + b.h + pad < a.y);
+        }
+
+        for(let i=0;i<count;i++){
+          const size = 70 + Math.floor(Math.random()*130);
+          let box = null;
+
+          for(let t=0;t<maxAttempts;t++){
+            const x = Math.random()*(vw() - size);
+            const y = Math.random()*(vh() - size);
+            const candidate = {x, y, w: size, h: size};
+
+            let ok = true;
+            for(const p of placed){
+              if(intersects(candidate, p)){ ok = false; break; }
+            }
+            if(ok){ box = candidate; break; }
+          }
+
+          if(!box) continue;
+          placed.push(box);
+
+          const el = document.createElement('div');
+          el.className = 'bg-icon';
+          const src = icons[Math.floor(Math.random()*icons.length)];
+          const r = (Math.random()*360).toFixed(0);
+
+          el.style.width = `${box.w}px`;
+          el.style.height = `${box.h}px`;
+          el.style.left = `${(box.x + box.w/2)}px`;
+          el.style.top = `${(box.y + box.h/2)}px`;
+          el.style.transform = `translate(-50%, -50%) rotate(${r}deg)`;
+          el.style.opacity = (0.05 + Math.random()*0.06).toFixed(3);
+          el.style.backgroundImage = `url("${src}")`;
+          bg.appendChild(el);
+        }
+      }
+})();
+  </script>
+
+</body>
+</html>
