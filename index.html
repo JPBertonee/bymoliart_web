@@ -103,139 +103,146 @@
   </nav>
 
   <section class="portfolio split-section" id="portfolio">
-    <div class="split-left">
-      <div class="split-num">01</div>
-      <h2 class="split-title">Portfolio</h2>
+  <div class="split-left">
+    <div class="split-num">01</div>
+    <h2 class="split-title">Portfolio</h2>
+  </div>
+
+  <div class="split-right">
+    <div class="portfolio-grid" id="portfolioGrid" aria-label="Projects">
+
+      <!-- 1. Eternamente Bali -->
+      <article class="portfolio-item" data-portfolio-item>
+        <button
+          class="project-card__btn js-open-project"
+          type="button"
+          data-title="Eternamente Bali"
+          data-subtitle="A joyful and luminous textile design inspired by a journey through Indonesia, where culture, nature and emotion come together in a contemporary, feminine aesthetic."
+          data-images='[
+            "assets/projects/eternamente-bali/00_cover.jpeg",
+            "assets/projects/eternamente-bali/01_mockup_green.jpeg",
+            "assets/projects/eternamente-bali/03_mockup_purple_set.jpeg",
+            "assets/projects/eternamente-bali/04_pattern_original.jpeg",
+            "assets/projects/eternamente-bali/05_pattern_variants.jpeg",
+            "assets/projects/eternamente-bali/06_mockup_peach_outfit.jpeg"
+          ]'
+        >
+          <div class="project-card__media">
+            <img src="assets/projects/eternamente-bali/00_cover.jpeg" alt="Eternamente Bali — project preview" loading="lazy" />
+          </div>
+          <div class="project-card__meta">
+            <span class="project-card__title">Eternamente Bali</span>
+            <span class="project-card__cta">View gallery →</span>
+          </div>
+        </button>
+      </article>
+
+      <!-- 2. Monkeys -->
+      <article class="portfolio-item" data-portfolio-item>
+        <button
+          class="project-card__btn js-open-project"
+          type="button"
+          data-title="Monkeys"
+          data-subtitle="A vibrant textile design inspired by the flora and fauna of Bali, where playful monkeys, organic shapes and tropical colors bring warmth, energy and personality to bed linens and quilts."
+          data-images='[
+            "assets/projects/monkeys/00_cover.jpeg",
+            "assets/projects/monkeys/01_pattern.jpeg",
+            "assets/projects/monkeys/02_mockup-1.jpeg",
+            "assets/projects/monkeys/03_mockup-3.jpeg"
+          ]'
+        >
+          <div class="project-card__media">
+            <img src="assets/projects/monkeys/00_cover.jpeg" alt="Monkeys — project preview" loading="lazy" />
+          </div>
+          <div class="project-card__meta">
+            <span class="project-card__title">Monkeys</span>
+            <span class="project-card__cta">View gallery →</span>
+          </div>
+        </button>
+      </article>
+
+      <!-- 3. Onírico -->
+      <article class="portfolio-item" data-portfolio-item>
+        <button
+          class="project-card__btn js-open-project"
+          type="button"
+          data-title="Onírico"
+          data-subtitle="An aquatic, dreamlike textile design where mythological creatures, flowers and stars flow together in a soft, timeless universe of fantasy and beauty."
+          data-images='[
+            "assets/projects/onirico/00_cover.jpeg",
+            "assets/projects/onirico/01_pattern.jpeg",
+            "assets/projects/onirico/02_mockup-blue.jpeg",
+            "assets/projects/onirico/03_mockup-brown.jpeg",
+            "assets/projects/onirico/04_mockup-white.jpeg"
+          ]'
+        >
+          <div class="project-card__media">
+            <img src="assets/projects/onirico/00_cover.jpeg" alt="Onírico — project preview" loading="lazy" />
+          </div>
+          <div class="project-card__meta">
+            <span class="project-card__title">Onírico</span>
+            <span class="project-card__cta">View gallery →</span>
+          </div>
+        </button>
+      </article>
+
+      <!-- 4. Puerto Lombarda -->
+      <article class="portfolio-item" data-portfolio-item>
+        <button
+          class="project-card__btn js-open-project"
+          type="button"
+          data-title="Puerto Lombarda"
+          data-subtitle="Custom print series for Puerto Lombarda: a botanical and marine exploration of flowers, crabs, and jellyfish."
+          data-images='[
+            "assets/projects/puerto-lombarda/00_cover.jpeg",
+            "assets/projects/puerto-lombarda/01_pattern-flowers.jpeg",
+            "assets/projects/puerto-lombarda/02_pattern-jelly.jpeg",
+            "assets/projects/puerto-lombarda/04_mockup-crabs.jpeg",
+            "assets/projects/puerto-lombarda/03_mockup-flowers.jpeg",
+
+            "assets/projects/puerto-lombarda/05_mockup-jelly.jpeg"
+          ]'
+        >
+          <div class="project-card__media">
+            <img src="assets/projects/puerto-lombarda/00_cover.jpeg" alt="Puerto Lombarda — project preview" loading="lazy" />
+          </div>
+          <div class="project-card__meta">
+            <span class="project-card__title">Puerto Lombarda</span>
+            <span class="project-card__cta">View gallery →</span>
+          </div>
+        </button>
+      </article>
+
+      <!-- 5. Project 05 – Coming Soon -->
+      <article class="portfolio-item portfolio-item--blue" data-portfolio-item>
+        <button class="project-card__btn" type="button" disabled>
+          <div class="project-card__media">
+            <img src="assets/projects/placeholders/coming-soon.svg" alt="Project 05 — coming soon" loading="lazy" />
+          </div>
+          <div class="project-card__meta">
+            <span class="project-card__title">Project 05</span>
+            <span class="project-card__cta">Coming soon</span>
+          </div>
+        </button>
+      </article>
+
+      <!-- 6. Project 06 – Coming Soon -->
+      <article class="portfolio-item portfolio-item--pink" data-portfolio-item>
+        <button class="project-card__btn" type="button" disabled>
+          <div class="project-card__media">
+            <img src="assets/projects/placeholders/coming-soon.svg" alt="Project 06 — coming soon" loading="lazy" />
+          </div>
+          <div class="project-card__meta">
+            <span class="project-card__title">Project 06</span>
+            <span class="project-card__cta">Coming soon</span>
+          </div>
+        </button>
+      </article>
+
     </div>
-    <div class="split-right">
-      <!-- Portfolio grid: 2 columns, shows up to 6 items (2x3). More items reveal on click. -->
-      <div class="portfolio-grid" id="portfolioGrid" aria-label="Projects">
+  </div>
+</section>
 
-        <article class="portfolio-item" data-portfolio-item>
-          <button
-            class="project-card__btn js-open-project"
-            type="button"
-            data-title="Eternamente Bali"
-            data-subtitle="6-piece gallery — patterns + mockups"
-            data-images='[
-              "assets/projects/eternamente-bali/00_cover.jpeg",
-              "assets/projects/eternamente-bali/01_mockup_green.jpeg",
-              "assets/projects/eternamente-bali/03_mockup_purple_set.jpeg",
-              "assets/projects/eternamente-bali/04_pattern_original.jpeg",
-              "assets/projects/eternamente-bali/05_pattern_variants.jpeg",
-              "assets/projects/eternamente-bali/06_mockup_peach_outfit.jpeg"
-            ]'
-          >
-            <div class="project-card__media">
-              <img src="assets/projects/eternamente-bali/00_cover.jpeg" alt="Eternamente Bali — project preview" loading="lazy" />
-            </div>
-            <div class="project-card__meta">
-              <span class="project-card__title">Eternamente Bali</span>
-              <span class="project-card__cta">View gallery →</span>
-            </div>
-          </button>
-        </article>
-
-        <article class="portfolio-item" data-portfolio-item>
-          <button
-            class="project-card__btn js-open-project"
-            type="button"
-            data-title="Project 02"
-            data-subtitle="Preview"
-            data-images='[
-              "assets/projects/project-02/00_cover.jpeg"
-            ]'
-          >
-            <div class="project-card__media">
-              <img src="assets/projects/project-02/00_cover.jpeg" alt="Project 02 — project preview" loading="lazy" />
-            </div>
-            <div class="project-card__meta">
-              <span class="project-card__title">Project 02</span>
-              <span class="project-card__cta">View preview →</span>
-            </div>
-          </button>
-        </article>
-
-
-        <article class="portfolio-item portfolio-item--pink" data-portfolio-item>
-          <button
-            class="project-card__btn js-open-project"
-            type="button"
-            data-title="Project 03"
-            data-subtitle="Coming soon"
-            data-images='[
-              "assets/projects/placeholders/coming-soon.svg"
-            ]'
-          >
-            <div class="project-card__media">
-              <img src="assets/projects/placeholders/coming-soon.svg" alt="Project 03 — coming soon" loading="lazy" />
-            </div>
-            <div class="project-card__meta">
-              <span class="project-card__title">Project 03</span>
-              <span class="project-card__cta">View preview →</span>
-            </div>
-          </button>
-        </article>
-
-        <article class="portfolio-item portfolio-item--yellow" data-portfolio-item>
-          <button
-            class="project-card__btn js-open-project"
-            type="button"
-            data-title="Project 04"
-            data-subtitle="Coming soon"
-            data-images='[
-              "assets/projects/placeholders/coming-soon.svg"
-            ]'
-          >
-            <div class="project-card__media">
-              <img src="assets/projects/placeholders/coming-soon.svg" alt="Project 04 — coming soon" loading="lazy" />
-            </div>
-            <div class="project-card__meta">
-              <span class="project-card__title">Project 04</span>
-              <span class="project-card__cta">View preview →</span>
-            </div>
-          </button>
-        </article>
-
-        <article class="portfolio-item portfolio-item--blue" data-portfolio-item>
-          <button
-            class="project-card__btn js-open-project"
-            type="button"
-            data-title="Project 05"
-            data-subtitle="Coming soon"
-            data-images='[
-              "assets/projects/placeholders/coming-soon.svg"
-            ]'
-          >
-            <div class="project-card__media">
-              <img src="assets/projects/placeholders/coming-soon.svg" alt="Project 05 — coming soon" loading="lazy" />
-            </div>
-            <div class="project-card__meta">
-              <span class="project-card__title">Project 05</span>
-              <span class="project-card__cta">View preview →</span>
-            </div>
-          </button>
-        </article>
-
-        <article class="portfolio-item portfolio-item--pink" data-portfolio-item>
-          <button
-            class="project-card__btn js-open-project"
-            type="button"
-            data-title="Project 06"
-            data-subtitle="Coming soon"
-            data-images='[
-              "assets/projects/placeholders/coming-soon.svg"
-            ]'
-          >
-            <div class="project-card__media">
-              <img src="assets/projects/placeholders/coming-soon.svg" alt="Project 06 — coming soon" loading="lazy" />
-            </div>
-            <div class="project-card__meta">
-              <span class="project-card__title">Project 06</span>
-              <span class="project-card__cta">View preview →</span>
-            </div>
-          </button>
-        </article>
 
         <!-- Add more <article data-portfolio-item> blocks here. The page will show 6, then reveal the rest. -->
 
@@ -259,53 +266,96 @@
           <img class="about-avatar" src="assets/about_sofia.jpeg" alt="Sofia — Moliart" loading="lazy"/>
         </div>
         <div class="about-text">
-          <p>
-      I’m a surface pattern designer and illustrator creating expressive, joyful,
-      contemporary patterns for fashion and textile brands.
-      I design with real products in mind — how the print moves on the body,
-      how the colors translate on fabric, and how a collection feels when it all comes together.
-    </p>
-    <p>
-      My work is inspired by organic shapes, playful details and bold-yet-soft color stories.
-      I love building collections that feel modern, feminine and full of character — ready for licensing or custom collaborations.
-    </p>
-        </div>
+  <p>
+    My name is Sofi. I was born and raised in Argentina, but for many years I have been traveling and living in different countries.
+    I currently live in Australia, where I’ve been for almost two years—a place that deeply inspires me with its lush nature,
+    the sea, and incredible wildlife.
+  </p>
+
+  <p>
+    I trained as an architect and also studied Visual Arts, a path I didn’t complete but that confirmed something I’ve always known:
+    art has to be part of my life.
+  </p>
+
+  <p>
+    I have been drawing and creating for as long as I can remember. Over the past two years, I have chosen to fully follow my passion:
+    designing digital illustrations and prints. I specialize in colorful, energetic, and joyful prints, created for fashion and textile brands.
+  </p>
+
+  <p>
+    I find inspiration in my everyday surroundings: flowers, objects, landscapes, and my travels.
+    All of this transforms into unique and original pieces, through which I aim to bring identity and personality to each design.
+  </p>
+
+  <p>
+    I currently create digital prints and illustrations for brands seeking original, colorful designs with their own unique identity,
+    turning every idea into a one-of-a-kind piece.
+  </p>
+</div>
+
       </div>
     <!-- Etsy link removed from About (kept only in Contact section) -->
     </div>
   </section>
 
   <section class="services split-section" id="services">
-    <div class="split-left">
-      <div class="split-num">03</div>
-      <h2 class="split-title">Services</h2>
-    </div>
+  <div class="split-left">
+    <div class="split-num">03</div>
+    <h2 class="split-title">Services</h2>
+  </div>
 
-    <div class="split-right">
-      <div class="services-tiles" aria-label="Services">
-        <button class="service-tile service-tile--blue js-open-service" type="button"
-          data-title="Custom Patterns"
-          data-subtitle="Made for your brand"
-          data-body="I design custom, production‑ready prints tailored to your product, audience and aesthetic. From moodboard to final files, we build a print story that feels unmistakably yours.">
-          <span class="service-tile__word">Custom Patterns</span>
-        </button>
+  <div class="split-right">
+    <div class="services-acc" aria-label="Services">
 
-        <button class="service-tile service-tile--pink js-open-service" type="button"
-          data-title="Pattern Licensing"
-          data-subtitle="Ready-to-license artwork"
-          data-body="Choose from ready‑to‑license patterns and mini collections. Perfect if you need something beautiful, fast — with the option to adjust scale or colorways to suit your product.">
-          <span class="service-tile__word">Pattern Licensing</span>
-        </button>
-
-        <button class="service-tile service-tile--yellow js-open-service" type="button"
-          data-title="Mini Collections"
-          data-subtitle="Cohesive print stories"
-          data-body="I create cohesive sets of prints (hero + coordinates) with harmonious color stories and variations. Ideal for seasonal drops, capsules, or brand refreshes.">
-          <span class="service-tile__word">Mini Collections</span>
-        </button>
+      <!-- 1) Surface Pattern Design -->
+      <button class="service-acc service-acc--pink" type="button" aria-expanded="false">
+        <span class="service-acc__title">Surface Pattern Design</span>
+        <span class="service-acc__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="service-acc__panel service-acc__panel--pink">
+        <p>
+          Repeat patterns for fashion and textile applications, ready for production.
+        </p>
       </div>
+
+      <!-- 2) Illustration -->
+      <button class="service-acc service-acc--yellow" type="button" aria-expanded="false">
+        <span class="service-acc__title">Illustration</span>
+        <span class="service-acc__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="service-acc__panel service-acc__panel--yellow">
+        <p>
+          Custom illustrations developed for fashion, textile and lifestyle projects.
+        </p>
+      </div>
+
+      <!-- 3) Placement Prints -->
+      <button class="service-acc service-acc--blue" type="button" aria-expanded="false">
+        <span class="service-acc__title">Placement Prints</span>
+        <span class="service-acc__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="service-acc__panel service-acc__panel--blue">
+        <p>
+          Localized and engineered prints designed for specific garment areas.
+        </p>
+      </div>
+
+      <!-- 4) Print Collections -->
+      <button class="service-acc service-acc--pink" type="button" aria-expanded="false">
+        <span class="service-acc__title">Print Collections</span>
+        <span class="service-acc__icon" aria-hidden="true">+</span>
+      </button>
+      <div class="service-acc__panel service-acc__panel--pink">
+        <p>
+          Cohesive print stories including multiple designs, colorways and concepts.
+        </p>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
+
 
 
   <section class="contact split-section" id="contact">
@@ -359,6 +409,21 @@
           <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zM17.8 6.2a.9.9 0 1 1-.9-.9.9.9 0 0 1 .9.9z"/>
         </svg>
       </a>
+
+      <a class="contact-icon contact-icon--only" href="https://ar.pinterest.com/byMoliArt/" target="_blank" rel="noopener" aria-label="Pinterest">
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M12.04 2C6.58 2 3 5.64 3 9.86c0 2.93 1.64 4.62 2.62 4.62.4 0 .64-1.12.64-1.44 0-.38-1.02-1.26-1.02-2.94 0-3.48 2.64-5.92 6.06-5.92 2.94 0 5.12 1.66 5.12 4.72 0 2.28-0.92 6.56-3.88 6.56-1.08 0-2-0.78-2-1.9 0-1.64 1.14-3.22 1.14-4.98 0-2.9-4.12-2.38-4.12 1.12 0 0.74 0.1 1.56 0.44 2.22-0.64 2.74-1.96 6.82-1.96 9.66 0 0.88 0.12 1.74 0.2 2.62 0.04 0.12 0.06 0.24 0.18 0.24 0.1 0 0.14-0.06 0.2-0.14 0.94-1.3 0.92-1.56 1.34-3.2 0.22-0.86 1.26-4.92 1.26-4.92 0.62 1.18 2.42 2.22 4.34 2.22 5.72 0 6.66-5.2 6.66-7.9C21 5.58 16.88 2 12.04 2z"/>
+  </svg>
+</a>
+
+<a class="contact-icon contact-icon--only" href="https://www.linkedin.com/in/bymoliart" target="_blank" rel="noopener" aria-label="LinkedIn">
+  <svg viewBox="0 0 448 512" width="22" height="22" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+  </svg>
+</a>
+
+
+
     </div>
     <p>© byMoliart 2026</p>
   </footer>
@@ -751,6 +816,39 @@
         }
       }
 })();
+
+// Services accordion (inline)
+(function () {
+  const buttons = document.querySelectorAll('.service-acc');
+  if (!buttons.length) return;
+
+  function closeAll() {
+    buttons.forEach(btn => {
+      btn.setAttribute('aria-expanded', 'false');
+      const panel = btn.nextElementSibling;
+      if (panel && panel.classList.contains('service-acc__panel')) {
+        panel.classList.remove('is-open');
+      }
+    });
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.nextElementSibling;
+      if (!panel || !panel.classList.contains('service-acc__panel')) return;
+
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      closeAll();
+
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        panel.classList.add('is-open');
+      }
+    });
+  });
+})();
+
   </script>
 
 </body>
